@@ -36,7 +36,7 @@ public class DoublyLinkedListWithTail<T> implements List<T> {
         if (p == null) {
             throw new IllegalArgumentException("Posición nula");
         }
-        if (!(p instanceof Node)) {
+        if (!(p instanceof DoublyLinkedListWithTail.Node)) {
             throw new IllegalArgumentException("La posición no pertenece a esta lista");
         }
         Node node = (Node) p;
