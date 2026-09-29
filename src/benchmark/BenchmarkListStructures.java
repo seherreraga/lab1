@@ -169,7 +169,7 @@ public class Benchmark {
 
         for (int n : SIZES) {
             // SinglyLinkedList es O(n²), solo medir hasta 100
-            if (n <= 100) {
+            if (n <= 1000) {
                 List<Integer> sll = new SinglyLinkedList<>();
                 long time1 = measureAvg(() -> {
                     for (int i = 0; i < n; i++) sll.pushBack(i);
@@ -211,7 +211,7 @@ public class Benchmark {
 
         for (int n : SIZES) {
             // SinglyLinkedList es O(n²), solo medir hasta 100
-            if (n <= 100) {
+            if (n <= 1000) {
                 long time1 = benchmarkPopBackImpl(SinglyLinkedList::new, n);
                 results.add(new Result("SinglyLinkedList", "popBack", n, time1));
             } else {
