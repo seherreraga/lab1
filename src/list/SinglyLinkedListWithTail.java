@@ -34,7 +34,7 @@ public class SinglyLinkedListWithTail<T> implements List<T> {
         if (p == null) {
             throw new IllegalArgumentException("Posición nula");
         }
-        if (!(p instanceof Node)) {
+        if (!(p instanceof SinglyLinkedListWithTail.Node)) {
             throw new IllegalArgumentException("La posición no pertenece a esta lista");
         }
         Node node = (Node) p;
@@ -244,3 +244,4 @@ public class SinglyLinkedListWithTail<T> implements List<T> {
         return tail.element;
     }
 }
+
