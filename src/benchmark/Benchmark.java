@@ -1,4 +1,4 @@
-package Benchmark;
+package benchmark;
 
 import list.*;
 import java.io.PrintWriter;
