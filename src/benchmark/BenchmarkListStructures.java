@@ -168,8 +168,8 @@ public class Benchmark {
         java.util.List<Result> results = new ArrayList<>();
 
         for (int n : SIZES) {
-            // SinglyLinkedList es O(n²), solo medir hasta 10_000
-            if (n <= 10_000) {
+            // SinglyLinkedList es O(n²), solo medir hasta 100
+            if (n <= 100) {
                 List<Integer> sll = new SinglyLinkedList<>();
                 long time1 = measureAvg(() -> {
                     for (int i = 0; i < n; i++) sll.pushBack(i);
@@ -210,8 +210,8 @@ public class Benchmark {
         java.util.List<Result> results = new ArrayList<>();
 
         for (int n : SIZES) {
-            // SinglyLinkedList es O(n²), solo medir hasta 10_000
-            if (n <= 10_000) {
+            // SinglyLinkedList es O(n²), solo medir hasta 100
+            if (n <= 100) {
                 long time1 = benchmarkPopBackImpl(SinglyLinkedList::new, n);
                 results.add(new Result("SinglyLinkedList", "popBack", n, time1));
             } else {
